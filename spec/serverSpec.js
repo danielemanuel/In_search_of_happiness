@@ -1,5 +1,5 @@
 var Browser = require("zombie");
-var url = "http://localhost:4000/";
+var url = "http://localhost:3001/";
 var browser = new Browser();
 
 describe("testing with zombie", function() {
@@ -19,15 +19,9 @@ describe("testing with zombie", function() {
 
     it("should see page content", function(next) {
       browser.visit(url, function(err) {
-        expect(browser.html("body")).toContain("host for one page app")
+        expect(browser.html("body")).toContain("Welcome to Express")
         next();
       })
     });
-
-    // it("should find a record", function(next) {
-    //   browser.visit(url, function(err) {
-    //
-    //   })
-    // });
 
 });
