@@ -10,12 +10,12 @@
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.6.1",
+    "react-scripts": "1.0.7",
     "util-deprecate": "^1.0.2"
   },
   "devDependencies": {
     "chai": "^4.0.2",
     "eslint": "^4.0.0",
-    "react-scripts": "1.0.7",
     "sinon": "^2.3.5",
     "wdio-mocha-framework": "^0.5.10",
     "webdriverio": "^4.8.0"
