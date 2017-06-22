@@ -1,13 +1,13 @@
 {
   "name": "in-search-of-happiness",
   "engines": {
-    "node": "6.10.3"
+    "node": "6.10.x"
   },
   "version": "0.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "heroku-postbuild": "cd client/ && npm install && npm run build"
+    "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
