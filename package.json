@@ -1,22 +1,19 @@
 {
-  "name": "in-search-of-happiness",
-  "version": "1.0.0",
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "server.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "name": "react-backend",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielemanuel/in_search_of_happiness.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/danielemanuel/in_search_of_happiness/issues"
-  },
-  "homepage": "https://github.com/danielemanuel/in_search_of_happiness#readme"
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "jade": "^1.11.0",
+    "mongoose": "^4.10.8",
+    "morgan": "^1.8.2",
+    "serve-favicon": "^2.4.3",
+    "zombie": "^5.0.5"
+  }
 }
