@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
 
-mongoose.connect("mongodb://localhost:27017/company-test");
+mongoose.connect(process.env.MONGO_SITE || "mongodb://localhost:27017/company-test");
 
 var companySchema = mongoose.Schema({
   companyID: Number,
