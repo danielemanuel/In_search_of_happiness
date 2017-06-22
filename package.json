@@ -1,6 +1,9 @@
 {
   "name": "in-search-of-happiness",
-  "engine": {"node": "6.10.3"},
+  "engines": {
+    "node": "6.10.3",
+    "yarn": "^0.24.5"
+  },
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -17,8 +20,5 @@
     "morgan": "^1.8.2",
     "serve-favicon": "^2.4.3",
     "zombie": "^5.0.5"
-  },
-  "devDependencies": {
-    "yarn": "^0.24.5"
   }
 }
