@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
 var companies = require('./routes/companies');
 
 var app = express();
@@ -22,8 +21,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
 app.use('/companies', companies);
+
+if (process.env.NODE_ENV === 'production') {
+  app.get('*', function(req, res) {
+    res.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
+  });
+} else {
+  var index = require('./routes/index');
+  app.use('/', index);
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
