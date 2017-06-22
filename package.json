@@ -16,5 +16,8 @@
     "morgan": "^1.8.2",
     "serve-favicon": "^2.4.3",
     "zombie": "^5.0.5"
+  },
+  "devDependencies": {
+    "yarn": "^0.24.5"
   }
 }
