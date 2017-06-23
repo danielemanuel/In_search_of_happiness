@@ -19,13 +19,26 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>In Search Of Happiness</h2>
         </div>
+
         <div className="App-body">
           <h3>Companies</h3>
-          <ol>
-            {this.state.companies.map(company =>
-              <li>{company.name}<br></br>{company.overallRating}</li>
-            )}
-          </ol>
+
+          <table className='ui structured large table'>
+            <thead>
+                <tr>
+                  <td>Company Name</td>
+                  <td>Glassdoor Rating</td>
+                </tr>
+            </thead>
+            <tbody>
+              {this.state.companies.map(company =>
+                <tr>
+                  <td>{company.name}</td>
+                  <td>{company.overallRating}</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     );

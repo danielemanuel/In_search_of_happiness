@@ -10,7 +10,7 @@ describe('companies', function() {
   });
 
   it("should see the overall rating on the page", ()=> {
-    expect(browser.getText('#li=Redgate Software')).to.include("4.3");
+    expect(browser.getText('.App-body')).to.include('4.3');
   });
 
 });

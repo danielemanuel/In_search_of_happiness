@@ -10,7 +10,7 @@ describe('in-search-of-happiness homepage', function() {
   });
 
   it('should have a list of companies', ()=> {
-    expect(browser.getTagName('li').length).to.equal(100);
+    expect(browser.getTagName('tr').length).to.equal(100);
   });
 
   it('should not have empty list elements', ()=> {
