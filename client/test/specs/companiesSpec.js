@@ -14,7 +14,9 @@ describe('companies', function() {
   });
 
   it("should filter out a company with a rating of less than 3", ()=> {
-    expect(parseInt(browser.getText('.rating'))).to.be.above(2.9);
+    browser.elements(".rating").value.forEach( (object) => {
+      expect(parseFloat(object.getText())).to.be.above(2.9);
+    });
   });
 
   it("should display website on the page", ()=> {
