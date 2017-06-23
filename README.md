@@ -4,7 +4,7 @@ A single page web app to help developers find their dream company to work for.
 
 ## To use
 
-Visit http://in-search-of-happiness.herokuapp.com/
+Visit [http://in-search-of-happiness.herokuapp.com/](http://in-search-of-happiness.herokuapp.com/)
 
 ## To run locally
 
