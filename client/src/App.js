@@ -21,11 +21,29 @@ class App extends Component {
         </div>
         <div className="App-body">
           <h3>Companies</h3>
-          <ol>
-            {this.state.companies.map(company =>
-              <li>{company.name}</li>
-            )}
-          </ol>
+          <table className='ui structured large table'>
+            <thead>
+              <tr>
+                <td>Company Name</td>
+                <td>Glassdoor Rating</td>
+                <td>Website</td>
+                <td>Industry</td>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.companies.map(function(company){
+                if (company.overallRating > "3.0") {
+                  return <tr>
+                    <td>{company.name}</td>
+                    <td className="rating">{company.overallRating}</td>
+                    <td className="website"><a href={"http://"+company.website} target="_blank">{company.website}</a></td>
+                    <td className="industry">{company.industryName}</td>
+                  </tr>
+                }
+              }
+              )}
+            </tbody>
+          </table>
         </div>
       </div>
     );

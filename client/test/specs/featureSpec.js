@@ -10,11 +10,16 @@ describe('in-search-of-happiness homepage', function() {
   });
 
   it('should have a list of companies', ()=> {
-    expect(browser.getTagName('li').length).to.equal(100);
+    expect(browser.getTagName('tr').length).to.be.above(2);
   });
 
   it('should not have empty list elements', ()=> {
-    expect(browser.getTagName('li')[5].innerHTML).to.not.equal('');
+    expect(browser.getTagName('tr')[5].innerHTML).to.not.equal('');
+  });
+
+  it("can filter out companies with an overall rating less than three stars", ()=> {
+    expect(browser.getText('.App-body')).to.not.include("ION Trading");
+    expect(browser.getText('.App-body')).to.not.include("Capita");
   });
 
 });
