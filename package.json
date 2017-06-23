@@ -1,27 +1,38 @@
 {
-  "name": "in-search-of-happiness",
+  "name": "heroku-cra-node",
+  "version": "1.0.0",
+  "description": "How to use create-react-app with a custom Node API on Heroku",
   "engines": {
-    "node": "6.10.x"
+    "node": "6.9.x"
   },
-  "version": "0.0.0",
-  "private": true,
   "scripts": {
-    "start": "node ./server/bin/www",
-    "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
+    "start": "node server",
+    "start-dev": "concurrently \"nodemon server\" \"cd react-ui && npm start\"",
+    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
-    "client/node_modules"
+    "react-ui/node_modules"
   ],
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "cookie-parser": "^1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "jade": "^1.11.0",
-    "mongoose": "^4.10.8",
-    "morgan": "^1.8.2",
-    "serve-favicon": "^2.4.3",
+    "express": "^4.14.1",
+    "mongoose": "^4.10.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielemanuel/in_search_of_happiness"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "create-react-app",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "jasmine": "^2.6.0",
+    "nodemon": "^1.11.0",
     "zombie": "^5.0.5"
   }
 }
