@@ -1,12 +1,11 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
-# dependencies
+# Node build artifacts
 node_modules
-client/node_modules
-client/errorShots
+npm-debug.log
 
 # testing
-/coverage
+coverage
 
 # production
 build
@@ -18,6 +17,14 @@ build
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Local development
+*.env
+*.dev
+.DS_Store
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+selenium-server-standalone-3.0.1.jar
+react-ui/errorShots
