@@ -14,7 +14,7 @@ describe('companies', function() {
   });
 
   it("should filter out a company with a rating of less than 3", ()=> {
-    expect(browser.getText('App-body')).to.not.include('2.0');
+    expect(parseInt(browser.getText('.rating'))).to.be.above(2.9);
   });
 
 });
