@@ -31,11 +31,15 @@ class App extends Component {
                 </tr>
             </thead>
             <tbody>
-              {this.state.companies.map(company =>
-                <tr>
-                  <td>{company.name}</td>
-                  <td>{company.overallRating}</td>
-                </tr>
+              {this.state.companies.map((company) => {
+                if (company.overallRating === true) {
+                  return
+                    <tr>
+                      <td>{company.name}</td>
+                      <td>{company.overallRating}</td>
+                    </tr>
+                  }
+                  }
               )}
             </tbody>
           </table>

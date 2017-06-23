@@ -10,11 +10,11 @@ describe('in-search-of-happiness homepage', function() {
   });
 
   it('should have a list of companies', ()=> {
-    expect(browser.getTagName('tr').length).to.equal(100);
+    expect(browser.getTagName('tr').length).to.be(101);
   });
 
   it('should not have empty list elements', ()=> {
-    expect(browser.getTagName('li')[5].innerHTML).to.not.equal('');
+    expect(browser.getTagName('tr')[5].innerHTML).to.not.equal('');
   });
 
   it("can filter out companies with an overall rating less than three stars", ()=> {

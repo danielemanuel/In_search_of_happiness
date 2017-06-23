@@ -13,4 +13,8 @@ describe('companies', function() {
     expect(browser.getText('.App-body')).to.include('4.3');
   });
 
+  it("should filter out a company with a rating of less than 3", ()=> {
+    expect(browser.getText('App-body')).to.not.include('2.0');
+  });
+
 });
