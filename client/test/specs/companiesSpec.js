@@ -5,10 +5,12 @@ describe('companies', function() {
     browser.url('http://localhost:3000');
   });
 
-  it("finds overall rating on the page", ()=> {
+  it("finds companies on the page", ()=> {
     expect(browser.getText('.App-body')).to.include("Expedia");
-    // expect(browser.getText('.App-body')).to.not.include("ION Trading");
-    // expect(browser.getText('.App-body')).to.not.include("Capita");
+  });
+
+  it("should see the overall rating on the page", ()=> {
+    expect(browser.getText('#li=Redgate Software')).to.include("4.3");
   });
 
 });
