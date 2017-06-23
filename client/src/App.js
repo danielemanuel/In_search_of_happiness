@@ -19,16 +19,14 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>In Search Of Happiness</h2>
         </div>
-
         <div className="App-body">
           <h3>Companies</h3>
-
           <table className='ui structured large table'>
             <thead>
-                <tr>
-                  <td>Company Name</td>
-                  <td>Glassdoor Rating</td>
-                </tr>
+              <tr>
+                <td>Company Name</td>
+                <td>Glassdoor Rating</td>
+              </tr>
             </thead>
             <tbody>
               {this.state.companies.map(function(company){
@@ -50,5 +48,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <br></br>><td>{company.overallRating}</td><
