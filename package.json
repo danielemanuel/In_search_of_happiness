@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node server",
-    "setup-db": "concurrently \"brew install mongodb\" \"brew tap homebrew/services\" \"brew services start mongodb\" \"node createLocalTestDb.js\" \"mongod\"",
+    "setup-db": "concurrently \"brew install mongodb\" \"brew tap homebrew/services\" \"brew services run mongodb\" \"node createLocalTestDb.js\"",
     "start-servers": "concurrently \"nodemon server\" \"cd react-ui && npm start\"",
     "test": "concurrently \"jasmine-node spec/ --color\" \"cd react-ui && ./node_modules/.bin/wdio wdio.conf.js\"",
     "test-backend": "jasmine-node spec/ --color",
