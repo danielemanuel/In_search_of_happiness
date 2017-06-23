@@ -27,6 +27,7 @@ class App extends Component {
                 <td>Company Name</td>
                 <td>Glassdoor Rating</td>
                 <td>Website</td>
+                <td>Industry</td>
               </tr>
             </thead>
             <tbody>
@@ -36,6 +37,7 @@ class App extends Component {
                     <td>{company.name}</td>
                     <td className="rating">{company.overallRating}</td>
                     <td className="website"><a href={"http://"+company.website} target="_blank">{company.website}</a></td>
+                    <td className="industry">{company.industryName}</td>
                   </tr>
                 }
               }
