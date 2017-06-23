@@ -23,7 +23,7 @@ class App extends Component {
           <h3>Companies</h3>
           <ol>
             {this.state.companies.map(company =>
-              <li>{company.name}</li>
+              <li><td>{company.name}</td></li>
             )}
           </ol>
         </div>
@@ -33,3 +33,5 @@ class App extends Component {
 }
 
 export default App;
+
+// <br></br>><td>{company.overallRating}</td><
