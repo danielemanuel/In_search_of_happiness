@@ -17,4 +17,8 @@ describe('companies', function() {
     expect(parseInt(browser.getText('.rating'))).to.be.above(2.9);
   });
 
+  it("see website on the page", ()=> {
+    expect(browser.getText('.App-body')).to.include('www.expedia.com')
+  });
+
 });

@@ -26,15 +26,16 @@ class App extends Component {
               <tr>
                 <td>Company Name</td>
                 <td>Glassdoor Rating</td>
+                <td>Website</td>
               </tr>
             </thead>
             <tbody>
               {this.state.companies.map(function(company){
                 if (company.overallRating > "3.0") {
-                  console.log("string")
                   return <tr>
                     <td>{company.name}</td>
                     <td className="rating">{company.overallRating}</td>
+                    <td className="website"><a href={"http://"+company.website} target="_blank">{company.website}</a></td>
                   </tr>
                 }
               }
