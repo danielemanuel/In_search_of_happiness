@@ -1,6 +1,6 @@
-#
+#Ideas
 
-In Search of Happiness: A single page web app to help developers find their dream company to work for.
+####In Search of Happiness: A single page web app to help developers find their dream company to work for.
 
 ## What characteristics would job hunters be interested in when looking for a job?
 
