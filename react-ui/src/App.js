@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../public/sun-banner.jpg';
 import './App.css';
+import BarChart from './BarChart.js'
 
 class App extends Component {
   state = {companies: []}
@@ -17,6 +18,10 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>In Search Of Happiness</h2>
+          <h2>d3ia dashboard</h2>
+          <div>
+            <BarChart data={[5,10,1,3]} size={[500,500]} />
+          </div>
         </div>
         <div className="App-body">
           <h3>Companies</h3>
