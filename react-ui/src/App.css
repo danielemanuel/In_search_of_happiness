@@ -33,19 +33,60 @@ thead {
 
 .footer {
   margin: auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    padding-top: 50px;
-    padding-bottom: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
 }
 
 .link {
   border-radius: 15px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
-    padding: 25px;
-    width: 100px;
-    height: 100px;
-    background: white;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  width: 100px;
+  height: 100px;
+  background: white;
+}
+
+.social_links {
+  margin: auto;
+  position: absolute;
+  right: 0;
+  padding-top: 20px;
+  padding-right: 80px;
+}
+
+.facebook_icon img{
+  width: 48px !important;
+  height: 48px !important;
+  font-size: 18px !important;
+  border-radius: 50%;
+ -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+
+}
+
+.linkedin_icon img {
+  width: 50px !important;
+  height: 50px !important;
+  font-size: 18px !important;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+   transition: transform .8s ease-in-out;
+}
+
+.twitter_icon img {
+  width: 68px !important;
+  height: 68px !important;
+  font-size: 18px !important;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+   transition: transform .8s ease-in-out;
+}
+
+img:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+          width: 90px !important;
+          height: 90px !important;
 }
