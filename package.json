@@ -1,7 +1,7 @@
 {
-  "name": "heroku-cra-node",
+  "name": "in-search-of-happiness",
   "version": "1.0.0",
-  "description": "How to use create-react-app with a custom Node API on Heroku",
+  "description": "A site that helps junior devs generate ideas for their first job",
   "engines": {
     "node": "6.9.x"
   },
