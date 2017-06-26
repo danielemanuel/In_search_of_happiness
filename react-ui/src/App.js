@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import logo from '../public/sun-banner.jpg';
-
 import './App.css';
 
 class App extends Component {
@@ -46,9 +45,9 @@ class App extends Component {
               <a href='https://www.glassdoor.co.uk/index.htm' className='link'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
             </div>
             <div className='social_links'>
-              <a href='https://www.glassdoor.co.uk/Reviews/Facebook-Reviews-E40772.htm' target="_blank" className='facebook_icon'><img src='https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/facebook-128.png' /></a>
-              <a href='https://cdn0.iconfinder.com/data/icons/twitter-ui-flat/48/Twitter_UI-04-128.png' target='_blank' className='twitter_icon'><img src='https://cdn0.iconfinder.com/data/icons/popular-social-media-colored/48/JD-13-128.png' /></a>
-              <a href='https://www.glassdoor.co.uk/Reviews/LinkedIn-Reviews-E34865.htm' target='_blank' className='linkedin_icon'><img src='https://cdn0.iconfinder.com/data/icons/free-social-media-set/24/linkedin-128.png' /></a>
+              <a href='https://www.glassdoor.co.uk/Reviews/Facebook-Reviews-E40772.htm' target="_blank" className='facebook_icon'><img src='facebook.png' /></a>
+              <a href='https://cdn0.iconfinder.com/data/icons/twitter-ui-flat/48/Twitter_UI-04-128.png' target='_blank' className='twitter_icon'><img src='./twitter.png' /></a>
+              <a href='https://www.glassdoor.co.uk/Reviews/LinkedIn-Reviews-E34865.htm' target='_blank' className='linkedin_icon'><img src='linkedin.png' /></a>
             </div>
             </tbody>
           </table>
