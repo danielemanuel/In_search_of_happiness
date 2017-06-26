@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../public/sun-banner.jpg';
+import BubbleExample from './components/bubble';
+import RadarExample from './components/radar';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +22,8 @@ class App extends Component {
         </div>
         <div className="App-body">
           <h3>Companies</h3>
+          <BubbleExample/>
+          <RadarExample/>
           <table className='ui structured large table'>
             <thead>
               <tr>
@@ -33,6 +37,7 @@ class App extends Component {
             {this.state.companies.map(function(company){
               if (company.overallRating > "3.0") {
                 return <tr>
+                  <td><img src={company.squareLogo}></img></td>
                   <td>{company.name}</td>
                   <td className="rating">{company.overallRating}</td>
                   <td className="website"><a href={"http://"+company.website} target="_blank">{company.website}</a></td>
