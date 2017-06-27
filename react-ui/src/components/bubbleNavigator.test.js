@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link } from 'react-router-dom';
 import BubbleNavigator from './bubbleNavigator';
-import {shallow} from 'enzyme';
+import {mount, render, shallow} from 'enzyme';
 
 
 describe('BubbleNavigator', () => {
