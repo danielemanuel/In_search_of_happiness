@@ -32,4 +32,10 @@ describe('BubbleNavigator', () => {
   });
 
   // it('media item renders media companies on click', () => {
+  //   expect(bubbleNavigator.)
+
+  it('tests if the media industry circle moves', () => {
+    const mediaCirclePosition = bubbleNavigator.find('#Media').html();
+    expect(mediaCirclePosition).not.toEqual(bubbleNavigator.find('#Media').html());
+  });
 });
