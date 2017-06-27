@@ -9,7 +9,7 @@ describe('BubbleNavigator', () => {
   let bubbleNavigator = null;
 
   beforeEach(() => {
-    bubbleNavigator = shallow(
+    bubbleNavigator = mount(
       <BubbleNavigator />
     );
   });
