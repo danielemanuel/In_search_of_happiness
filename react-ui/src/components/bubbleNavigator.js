@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import * as d3 from 'd3';
 import shuffle from '../shuffleFunction';
+import CompanyData from './companyData';
 
 export default class BubbleNavigator extends Component {
   constructor(props) {
@@ -44,13 +45,14 @@ export default class BubbleNavigator extends Component {
   render() {
     const nodes = this.state.nodes;
     return (
-      <div id={'company-data'}>
+      <div id={'BubbleNavigator'}>
+        <Route path="/companies/:sector" component={CompanyData} />
         <svg width={this.state.width} height={this.state.height}>
           {nodes.map((node, index) =>(
-          <g key={index}>
+          <Link key={index} to={'/companies/' + node.name}>
             <circle r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
-            <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name}</text>
-          </g>
+            <text x={node.x} y={node.y} id={node.name} textAnchor={'middle'}>{node.name}</text>
+          </Link>
           ))}
         </svg>
       </div>
