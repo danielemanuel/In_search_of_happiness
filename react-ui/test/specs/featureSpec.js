@@ -21,5 +21,5 @@ describe('in-search-of-happiness homepage', function() {
     expect(browser.getText('.App-body')).to.not.include("ION Trading");
     expect(browser.getText('.App-body')).to.not.include("Capita");
   });
-
+ 
 });
