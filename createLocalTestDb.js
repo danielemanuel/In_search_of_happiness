@@ -1,7 +1,7 @@
 var http = require('http');
 var mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/brighton-test');
+mongoose.connect('mongodb://localhost:27017/company-test');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
