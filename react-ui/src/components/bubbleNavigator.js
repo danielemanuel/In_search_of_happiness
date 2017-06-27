@@ -13,7 +13,7 @@ export default class BubbleNavigator extends Component {
       forceStrength: -300,
       nodes: [],
       companies: [],
-      names: ['Chocolate', 'Information Technology', 'Metallica', 'Namespace', 'Finance', 'Aerospace', 'Media', 'Software', 'Consulting', 'Hardware'],
+      names: ['Finance', 'Information Technology', 'Telecommunications', 'Aerospace & Defense', 'Travel & Tourism', 'Business Services', 'Retail', 'Media', 'Manufacturing', 'Oil, Gas, Energy & Utilities'],
       colors: shuffle(['chocolate', 'gray', 'mediumseagreen', 'darkkhaki', 'darksalmon', 'mediumpurple', 'orangered', 'teal', 'steelblue', 'violet', 'tan', 'olive', 'lightcoral'])
     };
   }
@@ -21,7 +21,7 @@ export default class BubbleNavigator extends Component {
     this.state.names.forEach((name, index) => {
       this.state.nodes.push({
         name: name,
-        r: 80,
+        r: 85,
         x: 0,
         y: 0,
         key: index,
@@ -36,7 +36,7 @@ export default class BubbleNavigator extends Component {
       )
       .force('x', d3.forceX(this.state.width / 2))
       .force('y', d3.forceY(this.state.height / 2))
-      .force('collide', d3.forceCollide(80));
+      .force('collide', d3.forceCollide(85));
 
 
     this.force.on('tick', () => this.setState({nodes: this.state.nodes}));
