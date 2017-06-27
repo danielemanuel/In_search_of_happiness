@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Link } from 'react-router-dom';
 import BubbleNavigator from './bubbleNavigator';
 import {shallow} from 'enzyme';
 
@@ -18,7 +19,17 @@ describe('BubbleNavigator', () => {
     ReactDOM.render(<BubbleNavigator />, div);
   });
 
-  it('displays media industry', () => {
-    expect(bubbleNavigator.find('#media').text()).toEqual('Media');
+  it('has svg section', () => {
+    expect(bubbleNavigator.find('svg').html()).toContain('<svg width=\"1000\" height=\"650\">');
   });
+
+  it('displays media industry', () => {
+    expect(bubbleNavigator.find('#Media').html()).toContain('<text>Media</text>');
+  });
+
+  it('displays media industry as an 80r circle with a fill', () => {
+    expect(bubbleNavigator.find('#Media').html()).toContain('<circle r=\"80\" fill=\"');
+  });
+
+  // it('media item renders media companies on click', () => {
 });

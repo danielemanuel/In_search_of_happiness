@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../public/sun-banner.jpg';
 import './App.css';
+import BubbleNavigator from './components/bubbleNavigator'
 
 class App extends Component {
   state = {companies: []}
@@ -19,6 +20,7 @@ class App extends Component {
           <h2>In Search Of Happiness</h2>
         </div>
         <div className="App-body">
+          <BubbleNavigator />
           <h3>Companies</h3>
           <table className='ui structured large table'>
             <thead>
