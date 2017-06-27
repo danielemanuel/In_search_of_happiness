@@ -1,13 +1,10 @@
-import React from 'react';
-import {Radar} from 'react-chartjs-2';
-
 // var mongoose = require('mongoose');
 
 // mongoose.connect('mongodb://localhost:27017/company-test');
 // var db = mongoose.connection;
 // db.on('error', console.error.bind(console, 'connection error:'));
 
-var data = {
+const data = {
     labels: ["Leadership", "Work-life balance", "Community", "Pay", "Career progression", "Something", "Something"],
     datasets: [{
         label: 'Accenture',
@@ -29,22 +26,4 @@ var data = {
 
 // mongoose.disconnect();
 
-export default React.createClass({
-  displayName: 'RadarExample',
-  getInitialState: function () {
-    return { showChild: false };
-  },
-  _click: function() {
-    this.setState({showChild: !this.state.showChild});
-  },
-  render() {
-    return (
-      <div>
-        <h2>Radar Example</h2>
-        <button onClick={this._click}>Show radar chart comparison</button>
-        {this.state.showChild ? <Radar data={data} /> : null}
-      </div>
-    );
-  }
-});
-
+export default data;

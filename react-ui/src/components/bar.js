@@ -1,5 +1,6 @@
 import React from 'react';
-import {Radar} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
+//import data from '../dataPicker';
 
 // var mongoose = require('mongoose');
 
@@ -30,7 +31,7 @@ var data = {
 // mongoose.disconnect();
 
 export default React.createClass({
-  displayName: 'RadarExample',
+  displayName: 'BarExample',
   getInitialState: function () {
     return { showChild: false };
   },
@@ -40,11 +41,10 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <h2>Radar Example</h2>
-        <button onClick={this._click}>Show radar chart comparison</button>
-        {this.state.showChild ? <Radar data={data} /> : null}
+        <h2>Bar Example</h2>
+        <button onClick={this._click}>Show bar chart comparison</button>
+        {this.state.showChild ? <Bar data={data} /> : null}
       </div>
     );
   }
 });
-
