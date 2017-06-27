@@ -7,11 +7,8 @@ import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-const hashHistory = BrowserRouter.hashHistory;
 ReactDOM.render(
-  <BrowserRouter history={hashHistory}>
-    <App />
-  </BrowserRouter>,
+    <App />,
   document.getElementById('root')
 );
 registerServiceWorker();
