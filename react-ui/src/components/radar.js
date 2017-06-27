@@ -6,7 +6,22 @@ class RadarComparison extends Component {
   state = {companies: [],
     data: {
       labels: ['Overall', 'Culture and Values', 'Senior Leadership', 'Compensation and Benefits', 'Career Opportunities', 'Work-life Balance'],
-      datasets: []
+      datasets: [{
+        'label': 'Nokia',
+        'backgroundColor': 'rgba(255,0,0,0.4)',
+        'borderColor': 'rgba(255,0,0,1)',
+        'data': [3.8, 3.9, 3.4, 3.5, 3.5, 4.1]
+      }, {
+        'label': 'FactSet',
+        'backgroundColor': 'rgba(255,255,0,0.4)',
+        'borderColor': 'rgba(255,255,0,1)',
+        'data': [3.7, 3.9, 3.3, 3.4, 3.3, 4.1]
+      }, {
+        'label': 'UBS',
+        'backgroundColor': 'rgba(0,0,255,0.4)',
+        'borderColor': 'rgba(0,0,255,1)',
+        'data': [3.5, 3.5, 3.2, 3.3, 3.3, 3.5]
+      }]
     }
   };
 
