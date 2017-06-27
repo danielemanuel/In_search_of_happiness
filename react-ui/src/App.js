@@ -22,7 +22,7 @@ class App extends Component {
           <h3>Companies</h3>
           <table className='ui structured large table'>
             <thead>
-              <tr>
+              <tr>  
                 <td>Company Name</td>
                 <td>Glassdoor Rating</td>
                 <td>Website</td>
