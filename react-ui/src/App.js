@@ -23,9 +23,7 @@ class App extends Component {
         </div>
         <div className="App-body">
           <h3>Companies</h3>
-          <BubbleExample/>
           <RadarExample/>
-          <BarExample/>
           <table className='ui structured large table'>
             <thead>
               <tr>

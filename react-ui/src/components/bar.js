@@ -1,12 +1,5 @@
 import React from 'react';
 import {Bar} from 'react-chartjs-2';
-//import data from '../dataPicker';
-
-// var mongoose = require('mongoose');
-
-// mongoose.connect('mongodb://localhost:27017/company-test');
-// var db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
 
 var data = {
     labels: ["Leadership", "Work-life balance", "Community", "Pay", "Career progression", "Something", "Something"],
@@ -27,8 +20,6 @@ var data = {
         data: [19, 5, 3, 17, 18, 24, 12]
     } ]
 };
-
-// mongoose.disconnect();
 
 export default React.createClass({
   displayName: 'BarExample',
