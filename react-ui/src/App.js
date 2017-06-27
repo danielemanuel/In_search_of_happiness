@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../public/sun-banner.jpg';
+import logo from '../public/isoh-logo.png';
 import BubbleExample from './components/bubble';
 import RadarExample from './components/radar';
 import './App.css';
@@ -27,6 +27,7 @@ class App extends Component {
           <table className='ui structured large table'>
             <thead>
               <tr>
+                <td></td>
                 <td>Company Name</td>
                 <td>Glassdoor Rating</td>
                 <td>Website</td>
@@ -37,7 +38,7 @@ class App extends Component {
             {this.state.companies.map(function(company){
               if (company.overallRating > "3.0") {
                 return <tr>
-                  <td><img src={company.squareLogo}></img></td>
+                  <td><img src={company.squareLogo} height='50'></img></td>
                   <td>{company.name}</td>
                   <td className="rating">{company.overallRating}</td>
                   <td className="website"><a href={"http://"+company.website} target="_blank">{company.website}</a></td>
