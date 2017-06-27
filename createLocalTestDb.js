@@ -33,7 +33,7 @@ var apiURL = function(params) {
 };
 
 var total = [];
-for (var i = 1; i < 99; i ++){
+for (var i = 1; i < 5; i ++){
   http.get(apiURL({'country': 'uk', 'query': 'software', 'page': i}), function(res) {
     var body = '';
     res.on('data', function(chunk) {

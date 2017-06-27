@@ -1,12 +1,10 @@
 var expect = require('chai').expect;
 
 describe('companies', function() {
-  before(function() {
-    browser.url('http://localhost:3000');
-  });
+  browser.url('http://localhost:3000');
 
   it("finds companies on the page", ()=> {
-    expect(browser.getText('.App-body')).to.include("Expedia");
+    expect(browser.getText('.App-body')).to.include("Nokia");
   });
 
   it("should display the overall rating on the page", ()=> {
@@ -20,7 +18,7 @@ describe('companies', function() {
   });
 
   it("should display website on the page", ()=> {
-    expect(browser.getText('.website')).to.include('www.expedia.com');
+    expect(browser.getText('.website')).to.include('www.nokia.com');
   });
 
   it("should display industry on the page", ()=> {
