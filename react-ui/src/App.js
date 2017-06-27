@@ -23,9 +23,7 @@ class App extends Component {
         </div>
         <div className="App-body">
           <h3>Companies</h3>
-          <BubbleExample/>
           <RadarExample/>
-          <BarExample/>
           <table className='ui structured large table'>
             <thead>
               <tr>
@@ -49,6 +47,9 @@ class App extends Component {
               }
             }
             )}
+            <div className='footer'>
+            <a href='https://www.glassdoor.co.uk/index.htm' className='link'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+            </div>
             </tbody>
           </table>
         </div>

@@ -27,4 +27,8 @@ describe('companies', function() {
     expect(browser.getText('.industry')).to.include('Internet');
   });
 
+  it("should display API footer on top of the page", () => {
+    expect(browser.getText('.footer')).to.include('powered by')
+  })
+
 });
