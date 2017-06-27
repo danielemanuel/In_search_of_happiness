@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '../public/sun-banner.jpg';
+import logo from '../public/isoh-logo.png';
 import RadarComparison from './components/radar';
 import List from './components/list';
 import './App.css';
