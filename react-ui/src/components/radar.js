@@ -41,7 +41,7 @@ export default React.createClass({
     return (
       <div>
         <h2>Radar Example</h2>
-        <button onClick={this._click}>Show radar chart comparison</button>
+        <button className="compare" onClick={this._click}>Show radar chart comparison</button>
         {this.state.showChild ? <Radar data={data} /> : null}
       </div>
     );

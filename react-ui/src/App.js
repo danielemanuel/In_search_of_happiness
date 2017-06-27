@@ -33,7 +33,7 @@ class App extends Component {
               </tr>
             </thead>
             <tbody>
-            {this.state.companies.map(function(company){
+            {this.state.companies.slice(0, 5).map(function(company){
               if (company.overallRating > "3.0") {
                 return <tr key={company.companyID}>
                   <td className="name">{company.name}</td>
