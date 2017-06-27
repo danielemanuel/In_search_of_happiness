@@ -39,10 +39,11 @@ class App extends Component {
                   <td className="industry">{company.industryName}</td>
                   </tr>
               }
+              return null;
             }
             )}
             <div className='footer'>
-            <a href='https://www.glassdoor.co.uk/index.htm' className='link'>powered by <img src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
+              <a href='https://www.glassdoor.co.uk/index.htm' className='link'>powered by <img alt='glassdoor-api-logo' src='https://www.glassdoor.com/static/img/api/glassdoor_logo_80.png' title='Job Search' /></a>
             </div>
             </tbody>
           </table>
