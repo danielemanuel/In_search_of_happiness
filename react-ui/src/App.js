@@ -39,7 +39,7 @@ class App extends Component {
             <tbody>
             {this.state.companies.map(function(company){
               if (company.overallRating > "3.0") {
-                return <tr key={company.name}>
+                return <tr key={company.companyID}>
                   <td className="logo"><img src={company.squareLogo} alt={company.name+" logo"}></img></td>
                   <td className="name">{company.name}</td>
                   <td className="rating">{company.overallRating}</td>
