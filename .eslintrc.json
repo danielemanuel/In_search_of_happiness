@@ -8,6 +8,10 @@
     "parserOptions": {
         "sourceType": "module"
     },
+    "globals": {
+      "before": false,
+      "browser": false
+    },
     "rules": {
         "indent": [
             "error",

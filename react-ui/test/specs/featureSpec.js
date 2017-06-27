@@ -5,21 +5,33 @@ describe('in-search-of-happiness homepage', function() {
     browser.url('http://localhost:3000');
   });
 
-  it('should have the page title', ()=> {
-    expect(browser.getText('.App-header h2')).to.equal('In Search Of Happiness');
+  it('should have the industry sectors', ()=> {
+    expect(browser.getText('#media')).to.equal('Media');
   });
 
-  it('should have a list of companies', ()=> {
-    expect(browser.getTagName('tr').length).to.be.above(2);
+  it('menu items are animated', ()=> {
+    const initialCX = browser.getAttribute('#media', 'cx');
+    expect(initialCX).to.not.equal(browser.getAttribute('#media', 'cx'));
   });
 
-  it('should not have empty list elements', ()=> {
-    expect(browser.getTagName('tr')[5].innerHTML).to.not.equal('');
+  it('clicking on sector should load companies in sector', ()=> {
+    browser.click('#media');
+    expect(browser.getTagName('td')).to.include('BBC');
   });
 
-  it("can filter out companies with an overall rating less than three stars", ()=> {
-    expect(browser.getText('.App-body')).to.not.include("ION Trading");
-    expect(browser.getText('.App-body')).to.not.include("Capita");
+  it('clicking on sector should not load companies outside of sector', ()=> {
+    expect(browser.getTagName('td')).to.not.include('Intel Corporation');
+  });
+
+  it('should filter out a company with a rating of less than 3', ()=> {
+    browser.elements('.rating').value.forEach( (object) => {
+      expect(parseFloat(object.getText())).to.be.above(2.9);
+    });
+  });
+
+  it('click on home should clear listed companies', ()=> {
+    browser.click('#home');
+    expect(browser.getHTML('#table')).to.not.include('<table>');
   });
 
 });
