@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
 import logo from '../public/sun-banner.jpg';
-import RadarComparison from './components/radar';
 import Table from './components/table';
 import Footer from './components/footer';
 import './App.css';
 
 class App extends Component {
-  
   constructor() {
     super();
     this.state = {
@@ -29,7 +27,6 @@ class App extends Component {
         </div>
         <div className='App-body'>
           <h3>Companies</h3>
-          <RadarComparison companies={this.state.companies}/>
           <Table data={this.state.companies}/>
         </div>
         <Footer/>

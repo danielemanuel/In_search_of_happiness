@@ -3,29 +3,20 @@ import {Radar} from 'react-chartjs-2';
 
 class RadarComparison extends Component {
   displayName = 'RadarComparison';
-  constructor() {
-    super();
-    this.state = {companies: {}};
-  }
-
-  componentDidMount() {
-    this.setState({companies: this.props.companies});
-  }
 
   render() {
+    let data = this.props.company;
     const comparisonData = {
       labels: ['Overall', 'Culture and Values', 'Senior Leadership', 'Compensation and Benefits', 'Career Opportunities', 'Work-life Balance'],
       datasets: [{
-        label: "Accenture",
+        label: data.name,
         backgroundColor: 'rgba(153,255,51,0.4)',
         borderColor: 'rgba(153,255,51,1)',
-        data: [12, 19, 3, 17, 28, 24]
+        data: [data.overallRating, data.cultureAndValuesRating, data.seniorLeadershipRating, data.compensationAndBenefitsRating, data.careerOpportunitiesRating, data.workLifeBalanceRating]
       }]
     };
     return (
       <div>
-        {console.log(this.state.companies)}
-        <h2>Radar Example</h2>
         <Radar data={comparisonData}/>
       </div>
     );
