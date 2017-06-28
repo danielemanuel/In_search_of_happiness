@@ -12,7 +12,7 @@ class App extends Component {
           <a href={'/'}><img src={logo} className='App-logo' alt='logo' /></a>
         </div>
         <div className='App-body'>
-          <h4>Helping developers find their dream company to work for</h4>
+          <h4>... Helping developers find their dream company to work for ...</h4>
           <BubbleNavigator />
         </div>
       </div>
