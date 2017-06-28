@@ -9,15 +9,28 @@ class RadarComparison extends Component {
     const comparisonData = {
       labels: ['Overall', 'Culture and Values', 'Senior Leadership', 'Compensation and Benefits', 'Career Opportunities', 'Work-life Balance'],
       datasets: [{
-        label: data.name,
         backgroundColor: 'rgba(153,255,51,0.4)',
         borderColor: 'rgba(153,255,51,1)',
         data: [data.overallRating, data.cultureAndValuesRating, data.seniorLeadershipRating, data.compensationAndBenefitsRating, data.careerOpportunitiesRating, data.workLifeBalanceRating]
       }]
     };
+
+    const options = {
+      legend: {
+        display: false
+      },
+      scale: {
+        ticks: {
+          min: 2,
+          max: 5,
+          stepSize: 0.5
+        }
+      }
+    };
+
     return (
       <div>
-        <Radar data={comparisonData}/>
+        <Radar data={comparisonData} options={ options }/>
       </div>
     );
   }
