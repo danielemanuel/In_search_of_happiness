@@ -4,7 +4,7 @@ import * as d3 from 'd3';
 import shuffle from '../shuffleFunction';
 import Table from './table';
 
-export default class BubbleNavigator extends Component {
+class BubbleNavigator extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,3 +59,5 @@ export default class BubbleNavigator extends Component {
     );
   }
 }
+
+export default BubbleNavigator;
