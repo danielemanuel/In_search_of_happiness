@@ -10,8 +10,12 @@ describe('BubbleNavigator',function() {
          fixture);
   });
 
-  it('expexts the right result ',function() {
-    expect(1+1).to.equal(2);
+  it('displays the BubbleNavigator bar',function() {
+    expect(document.getElementById('BubbleNavigator').innerHTML).to.include('<circle');
+  });
+
+  it('displays the bubbles', function() {
+    expect(document.getElementsByTagName('svg')).to.include('<circle');
   });
 });
    // describe('BubbleNavigator', () => {
