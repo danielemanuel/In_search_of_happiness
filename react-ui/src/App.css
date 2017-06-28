@@ -14,7 +14,7 @@
 }
 
 .App-body {
-  padding: 20px;
+  padding: 10px 0px 0px 0px;
 }
 
 .App-intro {
@@ -25,13 +25,17 @@
   color: #f60;
 }
 
+.Banner {
+  width: 40%;
+}
+
 /*@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }*/
 
 #BubbleNavigator {
-  padding: 20px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   clear: both;
 }
 

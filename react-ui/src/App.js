@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../public/isoh-logo.png';
+import banner from '../public/purpose-img.png';
 import './App.css';
 import BubbleNavigator from './components/bubbleNavigator';
 
@@ -12,7 +13,7 @@ class App extends Component {
           <a href={'/'}><img src={logo} className='App-logo' alt='logo' /></a>
         </div>
         <div className='App-body'>
-          <h4>... Helping developers find their dream company to work for ...</h4>
+          <img src={banner} className='Banner'/>
           <BubbleNavigator />
         </div>
       </div>
