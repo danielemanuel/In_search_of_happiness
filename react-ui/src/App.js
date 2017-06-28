@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import logo from '../public/sun-banner.jpg';
+import logo from '../public/isoh-logo.png';
 import RadarComparison from './components/radar';
 import Table from './components/table';
 import Footer from './components/footer';
@@ -28,7 +28,7 @@ class App extends Component {
       <div className="App">
       <div className='App-header'>
         <img src={logo} className='App-logo' alt='logo' />
-        <h2>In Search Of Happiness</h2>
+        <br></br>
         <a href={'/'}>Home</a>
       </div>
       <div className='App-body'>

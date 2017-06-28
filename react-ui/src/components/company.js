@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Company extends Component {
   displayName = 'Company';
 	render() {
-		return (	
+		return (
 		  <tr key={this.props.data.companyID}>
 		      <td className='logo'><img src={this.props.data.squareLogo} alt={this.props.data.name + ' Logo'}></img></td>
 		      <td className='name'>{this.props.data.name}</td>
@@ -16,4 +16,3 @@ class Company extends Component {
 }
 
 export default Company;
-
