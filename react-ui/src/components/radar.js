@@ -23,8 +23,12 @@ class RadarComparison extends Component {
         ticks: {
           min: 2,
           max: 5,
-          stepSize: 0.5
-        }
+          stepSize: 1
+        },
+        pointLabels: { 
+          fontSize:12,
+          fontFamily: "sans-serif"
+         }
       }
     };
 

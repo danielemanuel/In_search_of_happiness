@@ -12,7 +12,7 @@ class Company extends Component {
         <td className='rating'>{data.overallRating}</td>
         <td className='website'><a href={'http://'+data.website} target='_blank'>{data.website}</a></td>
         <td className='industry'>{data.industryName}</td>
-        <td><RadarComparison company={data}/></td>
+        <td className='radar'><RadarComparison company={data}/></td>
     </tr>
     );
   }
