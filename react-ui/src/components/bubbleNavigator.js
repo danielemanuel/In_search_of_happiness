@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import * as d3 from 'd3';
 import shuffle from '../shuffleFunction';
-import CompanyData from './companyData';
 import Table from './table';
 
 export default class BubbleNavigator extends Component {
