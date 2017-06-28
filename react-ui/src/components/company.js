@@ -6,7 +6,7 @@ class Company extends Component {
 	render() {
 		return (	
 		  <tr key={this.props.data.companyID}>
-		      <td></td>
+		      <td><Checkbox company={this.props.data}/></td>
 		      <td className='logo'><img src={this.props.data.squareLogo} alt={this.props.data.name + ' Logo'}></img></td>
 		      <td className='name'>{this.props.data.name}</td>
 		      <td className='rating'>{this.props.data.overallRating}</td>

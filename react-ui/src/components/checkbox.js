@@ -7,23 +7,25 @@ class Checkbox extends Component {
 		super();
 		this.state = {
 			isChecked: false,
-			companyID: this.props.companyID,
+			company: {},
 		};
 	}
 
 	handleCheckbox(checkedState) {
 		if (checkedState.checked) {
-	      console.log(this.state.companyID);
-	      this.setState({isChecked: true});
+	      console.log("checked");
+	      //this.setState({isChecked: true});
 	    } else {
-	      this.setState({isChecked: false});
+	      //this.setState({isChecked: false});
 	    }
 	}
 
 	render() {
+		//this.setState({company: this.props.company});
 		return (
 			<input type="checkbox" onChange={() => this.handleCheckbox(this)}/>
 		);
 	}
-
 }
+
+export default Checkbox;
