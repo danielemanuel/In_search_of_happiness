@@ -11,9 +11,9 @@ class App extends Component {
       <div className="App">
         <div className='App-header'>
           <a href={'/'}><img src={logo} className='App-logo' alt='logo' /></a>
+          <img src={banner} className='Banner'/>
         </div>
         <div className='App-body'>
-          <img src={banner} className='Banner'/>
           <BubbleNavigator />
         </div>
       </div>

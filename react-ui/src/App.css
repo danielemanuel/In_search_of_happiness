@@ -14,7 +14,7 @@
 }
 
 .App-body {
-  padding: 10px 0px 0px 0px;
+  padding: 10px 100px 10px 100px;
 }
 
 .App-intro {
@@ -26,16 +26,36 @@
 }
 
 .Banner {
-  width: 40%;
+  width: 50%;
+  padding: 10px;
 }
 
+#Industry-col {
+  width: 160px;
+}
+
+.Logo {
+  td-align: left;
+}
+
+.Name {
+  td-align: left;
+}
+
+.Table-container {
+  padding: 30px 0px 0px 0px;
+}
+
+tr {
+  vertical-align: center;
+}
 /*@keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }*/
 
 #BubbleNavigator {
-  padding: 0px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
   clear: both;
 }
 
@@ -43,9 +63,10 @@ thead {
   font-weight: bold;
 }
 
-tr td.radar {
+tr td .radar {
   min-width: 15vw;
-  padding: 10em 0 2em 0;
+  width: 500px;
+  padding: 30px;
 }
 
 .logo img {

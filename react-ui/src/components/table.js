@@ -16,14 +16,16 @@ class Table extends Component {
 
     return (
       <div id={'companyData'}>
+        <div className='Table-container'>
         <h4>{companySector} Companies</h4>
+        <br></br>
         <table className='ui structured large table'>
           <thead>
             <tr>
               <td>Site</td>
               <td>Company Name</td>
               <td>Glassdoor Rating</td>
-              <td>Industry</td>
+              <td id='Industry-col'>Industry</td>
             </tr>
           </thead>
           <tbody>
@@ -34,6 +36,7 @@ class Table extends Component {
           })}
           </tbody>
         </table>
+        </div>
       </div>
     );
   }
