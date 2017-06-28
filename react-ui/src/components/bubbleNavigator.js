@@ -12,7 +12,7 @@ class BubbleNavigator extends Component {
     this.state = {
       width: 1000,
       height: 650,
-      forceStrength: -300,
+      forceStrength: -500,
       nodes: [],
       companies: [],
       names: ['Finance', 'Information Technology', 'Telecommunications', 'Aerospace & Defense', 'Travel & Tourism', 'Business Services', 'Retail', 'Media', 'Manufacturing', 'Oil, Gas, Energy & Utilities'],
@@ -38,7 +38,7 @@ class BubbleNavigator extends Component {
       )
       .force('x', d3.forceX(this.state.width / 2))
       .force('y', d3.forceY(this.state.height / 2))
-      .force('collide', d3.forceCollide(85));
+      .force('collide', d3.forceCollide(88));
 
 
     this.force.on('tick', () => this.setState({nodes: this.state.nodes}));
