@@ -6,4 +6,5 @@ body {
 
 thead tr td {
   font-weight: bold;
+  max-height: 300px
 }

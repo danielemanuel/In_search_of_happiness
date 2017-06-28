@@ -3,6 +3,8 @@ import { Route, Link } from 'react-router-dom';
 import * as d3 from 'd3';
 import shuffle from '../shuffleFunction';
 import Table from './table';
+import Footer from './footer';
+
 
 class BubbleNavigator extends Component {
   constructor(props) {
@@ -55,6 +57,9 @@ class BubbleNavigator extends Component {
           </Link>
           ))}
         </svg>
+        <div>
+        <Footer/>
+        </div>
       </div>
     );
   }

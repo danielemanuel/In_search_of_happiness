@@ -30,8 +30,18 @@
   to { transform: rotate(360deg); }
 }*/
 
+#BubbleNavigator {
+  padding: 20px 0px 0px 0px;
+  clear: both;
+}
+
 thead {
   font-weight: bold;
+}
+
+tr td.radar {
+  min-width: 15vw;
+  padding: 10em 0 2em 0;
 }
 
 .logo img {
