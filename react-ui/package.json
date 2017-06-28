@@ -4,9 +4,7 @@
   "private": true,
   "devDependencies": {
     "chai": "^4.0.2",
-    "enzyme": "^2.9.1",
     "react-scripts": "0.9.5",
-    "react-test-renderer": "^15.6.1",
     "wdio-mocha-framework": "^0.5.10",
     "webdriverio": "^4.8.0"
   },
@@ -22,8 +20,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "wdio-test": "./node_modules/.bin/wdio wdio.conf.js",
+    "test": "./node_modules/.bin/wdio wdio.conf.js",
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:5000"
