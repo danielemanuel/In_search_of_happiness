@@ -11,14 +11,14 @@ class RadarComparison extends Component {
   componentDidMount() {
     fetch('/api/companies')
       .then(res => res.json())
-      .then(companies => this.setState({ companies }))
+      // .then(companies => this.setState({ companies }))
       .then(companies => this.setState({ data: {
         labels: ['Overall', 'Culture and Values', 'Senior Leadership', 'Compensation and Benefits', 'Career Opportunities', 'Work-life Balance'],
         datasets: [{
           'label': companies[0].name,
           'backgroundColor': 'rgba(153,255,51,0.4)',
           'borderColor': 'rgba(153,255,51,1)',
-          'data': [parseFloat(companies[0].overallRating), 2, 3, 4, 5, 6]
+          'data': [parseFloat(companies[0].overallRating), 2, 3, 4, 5, 4]
         }]
       }
       }));
