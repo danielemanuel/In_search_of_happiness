@@ -2,18 +2,29 @@
   "name": "react-ui",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test-features": "./node_modules/.bin/wdio wdio.conf.js",
+    "test": "jest --coverage",
+    "eject": "react-scripts eject"
+  },
   "devDependencies": {
     "chai": "^4.0.2",
+    "chai-dom": "^1.5.0",
+    "jest": "^20.0.4",
     "react-scripts": "0.9.5",
     "wdio-mocha-framework": "^0.5.10",
     "webdriverio": "^4.8.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "chart.js": "^2.6.0",
     "d3": "^4.9.1",
     "d3-force": "^1.0.6",
     "react": "^15.4.2",
     "react-bootstrap": "^0.31.0",
+    "react-chartjs-2": "^2.1.0",
     "react-dom": "^15.4.2",
     "react-router-dom": "^4.1.1"
   },
