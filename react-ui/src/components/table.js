@@ -9,7 +9,6 @@ class Table extends Component {
       <table className='ui structured large table'>
         <thead>
           <tr>
-          	<td> </td>
             <td> </td>
             <td>Company Name</td>
             <td>Glassdoor Rating</td>

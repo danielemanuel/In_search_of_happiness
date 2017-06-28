@@ -14,7 +14,7 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     fetch('/api/companies')
       .then(res => res.json())
       .then(companies => this.setState({ companies }));
