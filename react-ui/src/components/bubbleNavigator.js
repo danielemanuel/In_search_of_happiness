@@ -50,7 +50,7 @@ export default class BubbleNavigator extends Component {
         <svg width={this.state.width} height={this.state.height}>
           {nodes.map((node, index) =>(
           <Link key={index} id={node.name} to={'/companies/' + node.name}>
-            <circle r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
+            <circle id={node.name + 'Circle'} r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
             <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name}</text>
           </Link>
           ))}
@@ -61,4 +61,3 @@ export default class BubbleNavigator extends Component {
 
 
 }
-
