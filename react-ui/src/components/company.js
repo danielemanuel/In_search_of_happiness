@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import RadarComparison from './radar';
 
 class Company extends Component {
   displayName = 'Company';
   render() {
+    const data = this.props.data;
     return (
-		<tr key={this.props.data.companyID}>
-      <td className='logo'><img src={this.props.data.squareLogo} alt={this.props.data.name + ' Logo'}></img></td>
-      <td className='name'>{this.props.data.name}</td>
-      <td className='rating'>{this.props.data.overallRating}</td>
-      <td className='website'><a href={'http://'+this.props.data.website} target='_blank'>{this.props.data.website}</a></td>
-      <td className='industry'>{this.props.data.industryName}</td>
-  </tr>
+     <tr key={data.companyID}>
+        <td className='logo'><img src={data.squareLogo} alt={data.name + ' Logo'}></img></td>
+        <td className='name'>{data.name}</td>
+        <td className='rating'>{data.overallRating}</td>
+        <td className='website'><a href={'http://'+data.website} target='_blank'>{data.website}</a></td>
+        <td className='industry'>{data.industryName}</td>
+        <td><RadarComparison company={data}/></td>
+    </tr>
     );
   }
 }
