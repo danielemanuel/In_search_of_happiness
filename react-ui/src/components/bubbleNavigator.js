@@ -49,9 +49,9 @@ export default class BubbleNavigator extends Component {
         <Route path="/companies/:sector" component={CompanyData} />
         <svg width={this.state.width} height={this.state.height}>
           {nodes.map((node, index) =>(
-          <Link key={index} to={'/companies/' + node.name}>
+          <Link key={index} id={node.name} to={'/companies/' + node.name}>
             <circle r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
-            <text x={node.x} y={node.y} id={node.name} textAnchor={'middle'}>{node.name}</text>
+            <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name}</text>
           </Link>
           ))}
         </svg>

@@ -6,12 +6,12 @@ describe('in-search-of-happiness homepage', function() {
   });
 
   it('should have the industry sectors', ()=> {
-    expect(browser.getText('#media')).to.equal('Media');
+    expect(browser.getText('#Media')).to.equal('Media');
   });
 
   it('menu items are animated', ()=> {
-    const initialCX = browser.getAttribute('#media', 'cx');
-    expect(initialCX).to.not.equal(browser.getAttribute('#media', 'cx'));
+    const initialCX = browser.getAttribute('#Media', 'cx');
+    expect(initialCX).to.not.equal(browser.getAttribute('#Media', 'cx'));
   });
 
   it('clicking on sector should load companies in sector', ()=> {
