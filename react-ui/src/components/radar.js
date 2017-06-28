@@ -13,7 +13,6 @@ class RadarComparison extends Component {
   }
 
   render() {
-    
     const comparisonData = {
       labels: ['Overall', 'Culture and Values', 'Senior Leadership', 'Compensation and Benefits', 'Career Opportunities', 'Work-life Balance'],
       datasets: [{
