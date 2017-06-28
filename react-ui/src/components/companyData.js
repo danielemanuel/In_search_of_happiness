@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import Company from './company';
+import React from 'react';
 
-class Table extends Component {
+export default class CompanyData extends React.Component {
   state = {companies: []}
 
   componentDidMount() {
@@ -20,7 +19,6 @@ class Table extends Component {
         <table className='ui structured large table'>
           <thead>
             <tr>
-              <td> </td>
               <td>Company Name</td>
               <td>Glassdoor Rating</td>
               <td>Website</td>
@@ -28,16 +26,20 @@ class Table extends Component {
             </tr>
           </thead>
           <tbody>
-          {companies.map((company) => {
-            if (company.overallRating > '3.0' && company.sectorName === companySector) {
-              return (<Company data={company}/>);
-            }
-          })}
+            {companies.map(function(company){
+              if (company.overallRating > '3.0' && company.sectorName === companySector) {
+                return <tr key={company.companyID}>
+                    <td>{company.name}</td>
+                    <td className="rating">{company.overallRating}</td>
+                    <td className="website"><a href={'http://'+company.website} target='_blank'>{company.website}</a></td>
+                    <td className="industry">{company.industryName}</td>
+                  </tr>;
+              }
+              return undefined;
+            })}
           </tbody>
         </table>
       </div>
     );
   }
 }
-
-export default Table;
