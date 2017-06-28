@@ -30,8 +30,8 @@ describe('in-search-of-happiness homepage', function() {
   });
 
   it('click on home should clear listed companies', ()=> {
-    browser.click('#home');
-    expect(browser.isExisting('#companyData')).to.be(false);
+    browser.url('http://localhost:3000/');
+    expect(browser.getText('#Finance')).to.equal('Finance');
   });
 
 });
