@@ -8,13 +8,13 @@
 }
 
 .App-header {
-  height: 130px;
+  height: 200px;
   padding: 20px;
   color: white;
 }
 
 .App-body {
-  padding: 20px;
+  padding: 10px 100px 10px 100px;
 }
 
 .App-intro {
@@ -25,10 +25,40 @@
   color: #f60;
 }
 
-/*@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}*/
+.Banner {
+  height: 70px;
+  padding: 10px;
+}
+
+#Industry-col {
+  width: 160px;
+}
+
+#sector {
+  font-weight: 500;
+}
+
+svg a:link, svg a:visited, svg a:hover, svg a:active {
+  text-decoration: none;
+}
+
+.Table-container {
+  padding: 30px 0px 0px 0px;
+}
+
+tbody tr td {
+  max-height: 4em !important;
+  vertical-align: middle !important;
+  padding: 1em !important;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: WhiteSmoke;
+}
+
+tr {
+  vertical-align: center;
+}
 
 thead {
   font-weight: bold;
