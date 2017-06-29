@@ -3,17 +3,29 @@ import { Route, Link } from 'react-router-dom';
 import * as d3 from 'd3';
 import shuffle from '../shuffleFunction';
 import Table from './table';
+import Footer from './footer';
 
 class BubbleNavigator extends Component {
   constructor(props) {
     super(props);
     this.state = {
       width: 1000,
-      height: 650,
-      forceStrength: -300,
+      height: 750,
+      forceStrength: -500,
       nodes: [],
       companies: [],
-      names: ['Finance', 'Information Technology', 'Telecommunications', 'Aerospace & Defense', 'Travel & Tourism', 'Business Services', 'Retail', 'Media', 'Manufacturing', 'Oil, Gas, Energy & Utilities'],
+      names: [
+        ['Finance', 'Finance'],
+        ['Information Technology', 'Digital'],
+        ['Telecommunications', 'Telecoms'],
+        ['Aerospace & Defense', 'Aerospace & Defense'],
+        ['Travel & Tourism', 'Travel & Tourism'],
+        ['Business Services', 'Business Services'],
+        ['Retail', 'Retail'],
+        ['Media', 'Media'],
+        ['Manufacturing', 'Manufacturing'],
+        ['Oil, Gas, Energy & Utilities', 'Energy & Utilities']
+      ],
       colors: shuffle(['chocolate', 'gray', 'mediumseagreen', 'darkkhaki', 'darksalmon', 'mediumpurple', 'orangered', 'teal', 'steelblue', 'violet', 'tan', 'olive', 'lightcoral'])
     };
   }
@@ -36,7 +48,7 @@ class BubbleNavigator extends Component {
       )
       .force('x', d3.forceX(this.state.width / 2))
       .force('y', d3.forceY(this.state.height / 2))
-      .force('collide', d3.forceCollide(85));
+      .force('collide', d3.forceCollide(90));
 
 
     this.force.on('tick', () => this.setState({nodes: this.state.nodes}));
@@ -49,12 +61,15 @@ class BubbleNavigator extends Component {
         <Route path="/companies/:sector" component={Table} />
         <svg width={this.state.width} height={this.state.height}>
           {nodes.map((node, index) =>(
-          <Link key={index} id={node.name} to={'/companies/' + node.name}>
-            <circle id={node.name + 'Circle'} r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
-            <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name}</text>
+          <Link key={index} id={node.name[0]} to={'/companies/' + node.name[0]}>
+            <circle id={node.name[0] + 'Circle'} r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
+            <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name[1]}</text>
           </Link>
           ))}
         </svg>
+        <div>
+          <Footer/>
+        </div>
       </div>
     );
   }
