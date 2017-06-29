@@ -1,6 +1,6 @@
 # In Search of Happiness
 
-![a-screenshot-of-the-app-homepage](http://i.imgur.com/5NAVRqt.png)
+![a-screenshot-of-the-app-homepage](http://i.imgur.com/NpUoZOy.png)
 
 A single page web app to help developers find their dream company to work for. 
 
