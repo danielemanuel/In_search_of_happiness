@@ -7,11 +7,12 @@
   },
   "scripts": {
     "start": "node server",
-    "setup-db": "concurrently \"brew install mongodb\" \"brew tap homebrew/services\" \"brew services run mongodb\" \"node createLocalTestDb.js\"",
+    "setup": "brew install mongodb && brew install selenium-server-standalone && brew tap homebrew/services && brew services start mongodb && brew services start selenium-server-standalone",
+    "db-download": "node createLocalTestDb.js",
     "start-servers": "concurrently \"nodemon server\" \"cd react-ui && npm start\"",
     "test": "concurrently \"jasmine-node spec/ --color\" \"cd react-ui && ./node_modules/.bin/wdio wdio.conf.js\"",
     "test-backend": "jasmine-node spec/ --color",
-    "test-frontend": "concurrently \"cd react-ui/webdriverio-test && java -jar -Dwebdriver.gecko.driver=./geckodriver selenium-server-standalone-3.4.0.jar\" \"cd react-ui && ./node_modules/.bin/wdio wdio.conf.js\"",
+    "test-frontend": "cd react-ui && ./node_modules/.bin/wdio wdio.conf.js",
     "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build"
   },
   "cacheDirectories": [
