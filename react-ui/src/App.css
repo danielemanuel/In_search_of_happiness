@@ -37,14 +37,14 @@
   padding: 30px 0px 0px 0px;
 }
 
-#Industry-col {
-
+.name , .rating , .industry {
+  max-width: 200px !important;
 }
 
 h4#sector {
   font-weight: 400;
   font-size: 22px;
-  margin: 30px 0 30px 0;
+  margin: 20px 0 15px 0;
 }
 
 svg a:link, svg a:visited, svg a:hover, svg a:active {

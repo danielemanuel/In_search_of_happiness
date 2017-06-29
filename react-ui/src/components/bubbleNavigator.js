@@ -14,7 +14,18 @@ class BubbleNavigator extends Component {
       forceStrength: -500,
       nodes: [],
       companies: [],
-      names: ['Finance', 'Information Technology', 'Telecommunications', 'Aerospace & Defense', 'Travel & Tourism', 'Business Services', 'Retail', 'Media', 'Manufacturing', 'Oil, Gas, Energy & Utilities'],
+      names: [
+        ['Finance', 'Finance'],
+        ['Information Technology', 'Digital'],
+        ['Telecommunications', 'Telecoms'],
+        ['Aerospace & Defense', 'Aerospace & Defense'],
+        ['Travel & Tourism', 'Travel & Tourism'],
+        ['Business Services', 'Business Services'],
+        ['Retail', 'Retail'],
+        ['Media', 'Media'],
+        ['Manufacturing', 'Manufacturing'],
+        ['Oil, Gas, Energy & Utilities', 'Energy & Utilities']
+      ],
       colors: shuffle(['chocolate', 'gray', 'mediumseagreen', 'darkkhaki', 'darksalmon', 'mediumpurple', 'orangered', 'teal', 'steelblue', 'violet', 'tan', 'olive', 'lightcoral'])
     };
   }
@@ -50,9 +61,9 @@ class BubbleNavigator extends Component {
         <Route path="/companies/:sector" component={Table} />
         <svg width={this.state.width} height={this.state.height}>
           {nodes.map((node, index) =>(
-          <Link key={index} id={node.name} to={'/companies/' + node.name}>
-            <circle id={node.name + 'Circle'} r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
-            <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name}</text>
+          <Link key={index} id={node.name[0]} to={'/companies/' + node.name[0]}>
+            <circle id={node.name[0] + 'Circle'} r={node.r} cx={node.x} cy={node.y} fill={node.color} key={node.index} />
+            <text x={node.x} y={node.y} textAnchor={'middle'}>{node.name[1]}</text>
           </Link>
           ))}
         </svg>

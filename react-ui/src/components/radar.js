@@ -26,12 +26,12 @@ class RadarComparison extends Component {
           stepSize: 1
         },
         pointLabels: { 
-          fontSize:12,
+          fontSize:14,
           fontFamily: "sans-serif"
          }
       }
     };
-    
+
     return (
       <div>
         <Radar data={comparisonData} options={ options }/>
