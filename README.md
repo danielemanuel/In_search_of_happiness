@@ -1,6 +1,6 @@
 # In Search of Happiness
 
-![a-screenshot-of-the-app-homepage](http://i.imgur.com/ojDxvFC.png)
+![a-screenshot-of-the-app-homepage](http://i.imgur.com/5NAVRqt.png)
 
 A single page web app to help developers find their dream company to work for. 
 
@@ -39,36 +39,44 @@ Note that our front end tests rely on the project servers, so use `npm run start
 - Node API server with Express on backend.
 - React server on the front end that compiles to static files for production.
 - Heroku for site hosting.
+- mLab for storing production db in the cloud.
 
 ## Our tech stack
 
 ### Framework:
-* [MongoDB](https://www.mongodb.com/), 
-* [Express](http://expressjs.com/),
-* [React](https://facebook.github.io/react/),
+* [MongoDB](https://www.mongodb.com/)
+* [Express](http://expressjs.com/)
+* [React](https://facebook.github.io/react/)
 * [Node](https://nodejs.org/en/)
 
 ### Graphics:
 
-* [D3 and D3-Force](https://d3js.org/),
-* [Chart.js](http://www.chartjs.org/),
+* [D3 and D3-Force](https://d3js.org/)
+* [Chart.js](http://www.chartjs.org/)
 * [Bootstrap](http://getbootstrap.com/)
 
 ### Other:
 
-* [React Router DOM](https://reacttraining.com/react-router/web/guides/philosophy),
+* [React Router DOM](https://reacttraining.com/react-router/web/guides/philosophy)
 * [Mongoose](http://mongoosejs.com/)
 
 ### Test harness:
 
 #### Back End
 
-* [Zombie](http://zombie.js.org/), 
+* [Zombie](http://zombie.js.org/)
 * [Jasmine](https://jasmine.github.io/)
 
 #### Front End
 
-* [Selenium Standalone Server](http://www.seleniumhq.org/download/),
-* [Webdriver.io](http://webdriver.io/),
-* [Mocha](http://mochajs.org/), 
+* [Selenium Standalone Server](http://www.seleniumhq.org/download/)
+* [Webdriver.io](http://webdriver.io/)
+* [Mocha](http://mochajs.org/)
 * [Chai](http://chaijs.com/)
+
+## Contributors:
+
+* [Sam Blausten](https://github.com/sblausten)
+* [Chris Mitchell](https://github.com/chrisjmit)
+* [Alexander Chalk](https://github.com/adc17)
+* [Daniel Costea](https://github.com/danielemanuel/)
