@@ -11,7 +11,7 @@ class BubbleNavigator extends Component {
     super(props);
     this.state = {
       width: 1000,
-      height: 650,
+      height: 750,
       forceStrength: -500,
       nodes: [],
       companies: [],

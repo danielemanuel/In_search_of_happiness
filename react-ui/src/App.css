@@ -34,16 +34,26 @@
   width: 160px;
 }
 
-.Logo {
-  td-align: left;
+#sector {
+  font-weight: 500;
 }
 
-.Name {
-  td-align: left;
+svg a:link, svg a:visited, svg a:hover, svg a:active {
+  text-decoration: none;
 }
 
 .Table-container {
   padding: 30px 0px 0px 0px;
+}
+
+tbody tr td {
+  max-height: 4em !important;
+  vertical-align: middle !important;
+  padding: 1em !important;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: WhiteSmoke;
 }
 
 tr {
@@ -52,12 +62,6 @@ tr {
 
 thead {
   font-weight: bold;
-}
-
-tr td .radar {
-  min-width: 15vw;
-  width: 500px;
-  padding: 30px;
 }
 
 .logo img {
